@@ -35,6 +35,7 @@ if %selected%==1 (
 	SET target=x86
 ) else if %selected%==2 (
 	SET target=x64
+	SET cfg=!cfg! x64
 ) else (
 	goto error
 )
@@ -109,9 +110,9 @@ if %selected%==1 (
 :built
 
 if %specs%==win32-msvc2017 (	
-	%SOUIPATH%\tools\qmake2017 -tp vc -r -spec %SOUIPATH%\tools\mkspecs\%specs% "CONFIG=%cfg% "
+	%SOUIPATH%\tools\qmake2017 -tp vc -r -spec %SOUIPATH%\tools\mkspecs\%specs% "CONFIG += !cfg! "
 ) else (
-	%SOUIPATH%\tools\qmake -tp vc -r -spec %SOUIPATH%\tools\mkspecs\%specs% "CONFIG=%cfg% "
+	%SOUIPATH%\tools\qmake -tp vc -r -spec %SOUIPATH%\tools\mkspecs\%specs% "CONFIG += !cfg! "
 )
 
 rem call devenv souitest.%proj_ext%
