@@ -1,146 +1,127 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="souitest"
-	ProjectGUID="{D66FAA3B-3410-3480-BA7E-54BD1FD967AD}"
-	Keyword="Qt4VSv1.0">
+	ProjectGUID="{8FF82EC2-56D4-435B-A0FE-FC0534D3EF98}"
+	Keyword="Qt4VSv1.0"
+	TargetFrameworkVersion="0"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32" />
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\..\bin\"
+			OutputDirectory=".\"
+			ConfigurationType="1"
+			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			CharacterSet="1"
-			ConfigurationType="1"
-			IntermediateDirectory="..\..\obj\release\souitest\"
-			UseOfMfc="0">
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				WarningLevel="0"
+				DefaultCharType="0"
+				EnableErrorChecks="1"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".,.,..\..\utilities\include,..\..\soui\include,..\..\components,..\..\third-part\gtest\include,..\..\config,..\..\tools\mkspecs\win32-msvc2008"
-				AdditionalOptions="/MP -w34100 -w34189 -w44996"
-				AssemblerListingLocation="..\..\obj\release\souitest\"
-				DebugInformationFormat="3"
-				DisableSpecificWarnings="4100,4101,4102,4189,4996"
-				ExceptionHandling="1"
+				AdditionalOptions="/MP"
+				Optimization="2"
+				AdditionalIncludeDirectories=".,.,$(SOUIPATH)/utilities/include,$(SOUIPATH)/soui/include,$(SOUIPATH)/components,$(SOUIPATH)/config,$(SOUIPATH)/third-part/gtest/include,..\..\soui.git\tools\mkspecs\win32-msvc2008"
+				PreprocessorDefinitions="_CONSOLE,UNICODE,WIN32,_VARIADIC_MAX=10,NDEBUG"
 				GeneratePreprocessedFile="0"
-				ObjectFile="..\..\obj\release\souitest\"
-				Optimization ="1"
-				PreprocessorDefinitions="_CONSOLE,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST,NDEBUG"
-				ProgramDataBaseFileName="$(IntDir)"
+				ExceptionHandling="0"
 				RuntimeLibrary="0"
-				SuppressStartupBanner="true"
 				TreatWChar_tAsBuiltInType="true"
-				WarningLevel="3" />
+				AssemblerListingLocation=".\"
+				ObjectFile=".\"
+				ProgramDataBaseFileName=""
+				WarningLevel="0"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="0"
+			/>
 			<Tool
-				Name="VCCustomBuildTool" />
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_CONSOLE,UNICODE,WIN32,_VARIADIC_MAX=10"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLinkerTool"
+				IgnoreImportLibrary="true"
+				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
 				AdditionalDependencies="utilities.lib soui.lib gtest.lib"
-				AdditionalLibraryDirectories="..\..\bin"
-				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
-				DataExecutionPrevention="true"
-				EnableCOMDATFolding="2"
-				GenerateDebugInformation="true"
-				IgnoreImportLibrary="true"
-				LinkIncremental="1"
-				LinkTimeCodeGeneration="0"
-				OptimizeReferences="2"
 				OutputFile="$(OutDir)\souitest.exe"
+				LinkIncremental="1"
+				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories="$(SOUIPATH)\bin"
+				GenerateDebugInformation="false"
 				ProgramDatabaseFile=""
-				RandomizedBaseAddress="true"
 				SubSystem="1"
-				SuppressStartupBanner="true"
-				TargetMachine="1" />
-			<Tool
-				Name="VCManifestTool" />
-			<Tool
-				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
-			<Tool
-				Name="VCPostBuildEventTool" />
-			<Tool
-				Name="VCPreBuildEventTool" />
-			<Tool
-				Name="VCPreLinkEventTool" />
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_CONSOLE,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST" />
-		</Configuration>
-		<Configuration
-			Name="Debug|Win32"
-			OutputDirectory="..\..\bin\"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="1"
-			ConfigurationType="1"
-			IntermediateDirectory="..\..\obj\debug\souitest\"
-			UseOfMfc="0">
-			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".,.,..\..\utilities\include,..\..\soui\include,..\..\components,..\..\third-part\gtest\include,..\..\config,..\..\tools\mkspecs\win32-msvc2008"
-				AdditionalOptions="/MP -w34100 -w34189 -w44996"
-				AssemblerListingLocation="..\..\obj\debug\souitest\"
-				DebugInformationFormat="3"
-				DisableSpecificWarnings="4100,4101,4102,4189,4996"
-				ExceptionHandling="1"
-				GeneratePreprocessedFile="0"
-				ObjectFile="..\..\obj\debug\souitest\"
-				Optimization ="4"
-				PreprocessorDefinitions="_CONSOLE,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST"
-				ProgramDataBaseFileName="$(IntDir)"
-				RuntimeLibrary="1"
-				SuppressStartupBanner="true"
-				TreatWChar_tAsBuiltInType="true"
-				WarningLevel="3" />
-			<Tool
-				Name="VCCustomBuildTool" />
-			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="utilitiesd.lib souid.lib gtestd.lib"
-				AdditionalLibraryDirectories="..\..\bin"
-				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
-				DataExecutionPrevention="true"
-				GenerateDebugInformation="true"
-				IgnoreImportLibrary="true"
 				LinkTimeCodeGeneration="0"
-				OutputFile="$(OutDir)\souitestd.exe"
-				ProgramDatabaseFile=""
-				RandomizedBaseAddress="true"
-				SubSystem="1"
-				SuppressStartupBanner="true"
-				TargetMachine="1" />
+			/>
 			<Tool
-				Name="VCManifestTool" />
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCMIDLTool"
-				DefaultCharType="0"
-				EnableErrorChecks="1"
-				WarningLevel="0" />
+				Name="VCManifestTool"
+				EmbedManifest="false"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool" />
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool" />
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool" />
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_CONSOLE,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST,_DEBUG" />
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
-			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
 			<File
-				RelativePath="slog-test.cpp" />
+				RelativePath="slog-test.cpp"
+				>
+			</File>
 			<File
-				RelativePath="souitest.cpp" />
+				RelativePath="souitest.cpp"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

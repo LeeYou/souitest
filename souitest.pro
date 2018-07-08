@@ -7,15 +7,11 @@ TARGET = souitest
 CONFIG(x64){
 TARGET = $$TARGET"64"
 }
-DEPENDPATH += .
-INCLUDEPATH += . \
-			   ../../utilities/include \
-			   ../../soui/include \
-			   ../../components \
-			   ../../third-part/gtest/include \
 
-dir = ../..
-include($$dir/common.pri)
+include($$(SOUIPATH)/demo_com.pri)
+
+INCLUDEPATH += $(SOUIPATH)/third-part/gtest/include \
+
 
 CONFIG(debug,debug|release){
 	LIBS += utilitiesd.lib souid.lib gtestd.lib
